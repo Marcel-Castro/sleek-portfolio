@@ -1,12 +1,11 @@
 import Container from '@/components/common/Container';
 import About from '@/components/landing/About';
-import Blog from '@/components/landing/Blog';
 import CTA from '@/components/landing/CTA';
 import Experience from '@/components/landing/Experience';
-import Github from '@/components/landing/Github';
+// import Github from '@/components/landing/Github';
 import Hero from '@/components/landing/Hero';
 import Work from '@/components/landing/Projects';
-import Setup from '@/components/landing/Setup';
+// import Setup from '@/components/landing/Setup';
 import React from 'react';
 
 export default function page() {
@@ -16,10 +15,9 @@ export default function page() {
       <Experience />
       <Work />
       <About />
-      <Github />
-      <Blog />
+      {/* <Github /> */}
       <CTA />
-      <Setup />
+      {/* <Setup /> */}
     </Container>
   );
 }
