@@ -31,7 +31,7 @@ export default function WorkExperiencePage() {
             Work Experience
           </h1>
           <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-            My work experiences across different companies and roles.
+            A look at my professional journey so far.
           </p>
         </div>
 
@@ -41,11 +41,11 @@ export default function WorkExperiencePage() {
         <div className="space-y-6">
           <div className="flex items-center justify-between">
             <h2 className="text-2xl font-semibold">
-              All Experiences
+              All Roles
               {experiences.length > 0 && (
                 <span className="ml-2 text-sm font-normal text-muted-foreground">
                   ({experiences.length}{' '}
-                  {experiences.length === 1 ? 'experience' : 'experiences'})
+                  {experiences.length === 1 ? 'role' : 'roles'})
                 </span>
               )}
             </h2>

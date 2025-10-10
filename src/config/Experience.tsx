@@ -1,18 +1,14 @@
 import AWS from '@/components/technologies/AWS';
 import BootStrap from '@/components/technologies/BootStrap';
-import Bun from '@/components/technologies/Bun';
 import CSS from '@/components/technologies/CSS';
 import ExpressJs from '@/components/technologies/ExpressJs';
 import Figma from '@/components/technologies/Figma';
 import Html from '@/components/technologies/Html';
 import JavaScript from '@/components/technologies/JavaScript';
 import MongoDB from '@/components/technologies/MongoDB';
-import NestJs from '@/components/technologies/NestJs';
 import NextJs from '@/components/technologies/NextJs';
 import NodeJs from '@/components/technologies/NodeJs';
-import PostgreSQL from '@/components/technologies/PostgreSQL';
 import Postman from '@/components/technologies/Postman';
-import Prisma from '@/components/technologies/Prisma';
 import ReactIcon from '@/components/technologies/ReactIcon';
 import TailwindCss from '@/components/technologies/TailwindCss';
 import TypeScript from '@/components/technologies/TypeScript';
@@ -32,7 +28,7 @@ export interface Experience {
   description: string[];
   startDate: string;
   endDate: string;
-  website: string;
+  website?: string;
   x?: string;
   linkedin?: string;
   github?: string;
@@ -43,21 +39,25 @@ export interface Experience {
 
 export const experiences: Experience[] = [
   {
-    isCurrent: true,
-    isBlur: true,
-    company: 'good day :3',
-    position: 'Founding Frontend Engineer',
+    isCurrent: false,
+    company: 'Freelance for Various Clients',
+    position: 'Software Developer',
     location: 'United States (Remote)',
-    image: '/company/promote.png',
+    image: '/company/freelance_logo.png',
     description: [
-      'Architected and developed the complete frontend infrastructure for the platform, a comprehensive solution for creating and managing promotional campaigns.',
-      'Led a comprehensive codebase refactoring initiative that improved maintainability, scalability, and development velocity across the entire platform.',
-      'Integrated and optimized backend API connections, implementing efficient data fetching strategies and error handling mechanisms.',
-      'Enhanced user experience and interface design through implementation of consistent design systems, accessibility standards, and performance optimizations.',
+      'Developed and maintained Shopify and Next.js web applications for small businesses and marketing agencies.',
+      'Continued collaboration with Gorilla Marketing Group, supporting site updates, theme customizations, and CMS integrations.',
+      'Designed and deployed a Next.js web portal integrating Twilio APIs to centralize account management and streamline lead outreach for a marketing client.',
+      'Delivered projects focused on performance, responsiveness, and maintainability, working directly with clients to clarify requirements and deploy production-ready solutions.',
     ],
-    startDate: 'August 2025',
+    startDate: 'January 2024',
     endDate: 'Present',
     technologies: [
+      {
+        name: 'JavaScript',
+        href: 'https://javascript.com/',
+        icon: <JavaScript />,
+      },
       {
         name: 'Next.js',
         href: 'https://nextjs.org/',
@@ -89,86 +89,66 @@ export const experiences: Experience[] = [
         icon: <Vercel />,
       },
       {
-        name: 'AWS',
-        href: 'https://aws.amazon.com/',
-        icon: <AWS />,
-      },
-      {
         name: 'Postman',
         href: 'https://www.postman.com/',
         icon: <Postman />,
       },
       {
-        name: 'Bun',
-        href: 'https://bun.sh/',
-        icon: <Bun />,
+        name: 'MongoDB',
+        href: 'https://mongodb.com/',
+        icon: <MongoDB />,
+      },
+      {
+        name: 'HTML',
+        href: 'https://html.com/',
+        icon: <Html />,
+      },
+      {
+        name: 'CSS',
+        href: 'https://css.com/',
+        icon: <CSS />,
       },
     ],
-    website: '#',
-    github: '#',
-    x: '#',
   },
   {
     isCurrent: false,
-    company: 'Upsurge Labs',
-    position: 'Backend Developer Intern',
-    location: 'Bangalore, India (On-Site)',
-    image: '/company/upsurge.png',
+    company: 'Gorilla Marketing Group',
+    position: 'Software Developer',
+    location: 'Miami, FL',
+    image: '/company/gorilla_logo.png',
     description: [
-      'Backend development for *Bhindi.io*, a flagship product of Upsurge Labs, focusing on core infrastructure and agent development.',
-      'Engineered and deployed multiple high-performance agents, enhancing product capabilities and user experience.',
-      'Testing agent functionality, authentication, automation, and system stability.',
-      'Streamlined development workflows by optimizing internal tools and maintaining detailed technical documentation.',
+      'Refactored and optimized Shopify Liquid codebases to improve readability, performance, and visual design.',
+      'Built responsive front-end components aligned with product owner guidelines.',
+      'Integrated Contentful CMS into multiple Shopify storefronts to enable marketing teams to manage content without developer intervention.',
+      'Created and maintained Power Automate flows and Azure Functions to process and sync company data across Microsoft 365 services.',
     ],
-    startDate: 'June 2025',
-    endDate: 'July 2025',
+    startDate: 'January 2022',
+    endDate: 'January 2024',
     technologies: [
       {
-        name: 'NestJS',
-        href: 'https://nestjs.com/',
-        icon: <NestJs />,
+        name: 'HTML',
+        href: 'https://html.com/',
+        icon: <Html />,
       },
       {
-        name: 'Postman',
-        href: 'https://www.postman.com/',
-        icon: <Postman />,
+        name: 'CSS',
+        href: 'https://css.com/',
+        icon: <CSS />,
       },
       {
-        name: 'TypeScript',
-        href: 'https://www.typescriptlang.org/',
-        icon: <TypeScript />,
+        name: 'Node.js',
+        href: 'https://nodejs.org/',
+        icon: <NodeJs />,
       },
       {
-        name: 'Express',
-        href: 'https://expressjs.com/',
-        icon: <ExpressJs />,
+        name: 'Figma',
+        href: 'https://figma.com/',
+        icon: <Figma />,
       },
-    ],
-    website: 'https://bhindi.io',
-    github: 'https://github.com/upsurgeio',
-    x: 'https://x.com/upsurgelabs',
-    linkedin: 'https://www.linkedin.com/company/upsurge-labs-pte-ltd',
-  },
-  {
-    isCurrent: false,
-    company: 'Prepeasy',
-    position: 'Founding Engineer',
-    location: 'Freelance',
-    image: '/company/prepeasy.png',
-    description: [
-      'Independently architected and developed end-to-end full-stack solutions for core product features, resulting in 95% cost reduction in AI interview services.',
-      'Single-handedly engineered and deployed a scalable AI Interview Platform, implementing real-time leaderboard analytics and automated personalized interview feedback system, reducing per-session costs from *$7* to *$0.30*.',
-      'Designed and developed comprehensive AI Resume Builder with automated optimization features, increasing user engagement by generating tailored resume recommendations and industry-specific summaries.',
-      'Built and integrated an AI-powered Cover Letter Generator with customizable templates, improving user application success rates through personalized content generation.',
-      'Engineered a complete Learning Management System (LMS) with an integrated Quiz Platform, featuring progress tracking and performance analytics.',
-    ],
-    startDate: 'April 2025',
-    endDate: 'June 2025',
-    technologies: [
       {
-        name: 'Next.js',
-        href: 'https://nextjs.org/',
-        icon: <NextJs />,
+        name: 'JavaScript',
+        href: 'https://javascript.com/',
+        icon: <JavaScript />,
       },
       {
         name: 'Express',
@@ -176,9 +156,39 @@ export const experiences: Experience[] = [
         icon: <ExpressJs />,
       },
       {
-        name: 'TypeScript',
-        href: 'https://www.typescriptlang.org/',
-        icon: <TypeScript />,
+        name: 'Postman',
+        href: 'https://www.postman.com/',
+        icon: <Postman />,
+      },
+    ],
+    website: 'http://gmgadvertising.com/',
+    linkedin: 'https://www.linkedin.com/company/pitch-management-gmg/',
+  },
+  {
+    isCurrent: false,
+    company: 'Beck College Prep',
+    position: 'Software Developer',
+    location: 'Miami, FL',
+    image: '/company/beck_logo.png',
+    description: [
+      'Developed and deployed a high-performance static website using Gatsby.js to represent the company online, attracting new clients.',
+      'Built a checkout flow using Reach Router through Gatsby.js for purchasing tutoring sessions directly on the site.',
+      'Developed AWS SDK-based endpoints for securely managing file uploads to AWS S3 buckets.',
+      'Contributed to a RESTful API using Express and Mongoose to manage backend data operations.',
+      'Collaborated with company leadership to translate business requirements into scalable technical solutions.',
+    ],
+    startDate: 'August 2020',
+    endDate: 'May 2021',
+    technologies: [
+      {
+        name: 'Node.js',
+        href: 'https://nodejs.org/',
+        icon: <NodeJs />,
+      },
+      {
+        name: 'Express',
+        href: 'https://expressjs.com/',
+        icon: <ExpressJs />,
       },
       {
         name: 'React',
@@ -186,21 +196,6 @@ export const experiences: Experience[] = [
         icon: <ReactIcon />,
       },
       {
-        name: 'Prisma',
-        href: 'https://www.prisma.io/',
-        icon: <Prisma />,
-      },
-      {
-        name: 'PostgreSQL',
-        href: 'https://www.postgresql.org/',
-        icon: <PostgreSQL />,
-      },
-      {
-        name: 'Vercel',
-        href: 'https://vercel.com/',
-        icon: <Vercel />,
-      },
-      {
         name: 'AWS',
         href: 'https://aws.amazon.com/',
         icon: <AWS />,
@@ -209,42 +204,6 @@ export const experiences: Experience[] = [
         name: 'Postman',
         href: 'https://www.postman.com/',
         icon: <Postman />,
-      },
-      {
-        name: 'Bun',
-        href: 'https://bun.sh/',
-        icon: <Bun />,
-      },
-    ],
-    website: 'https://prepeasy.ai',
-    github: 'https://github.com/prepeasy',
-  },
-  {
-    isCurrent: false,
-    company: 'Expelee',
-    position: 'SDE-1 (Full Stack) Intern',
-    location: 'Dubai, UAE (Remote)',
-    image: '/company/expelee.png',
-    description: [
-      '*Riskmitra (riskmitra.com)*: Built full-stack product with Next.js, Tailwind CSS, Framer Motion, shadcn, wallet integration, and GitBook integration.',
-      '*Core AI (core-ai.me)*: Designed and developed with Next.js, Tailwind CSS, Framer Motion, shadcn, focusing on scalability and modular UI design.',
-      '*GPU AI (gpuai.me)*: Integrated Three.js for interactive 3D elements alongside full-stack features from Core AI setup.',
-      '*Altranium (gaming.altranium.com)*: Developed immersive gaming platform using Three.js, MERN, Tailwind, and Framer Motion.',
-      '*Pars Network (parsnetwork.me)*: Engineered landing experience with MERN, Tailwind CSS, and GSAP for advanced animations and transitions.',
-      '*TEQ Network (teq-network.vercel.app)*: Designed and developed landing page using MERN, Tailwind CSS, and Web3 wallet integration.',
-    ],
-    startDate: 'Aug 2023',
-    endDate: 'April 2025',
-    technologies: [
-      {
-        name: 'Bun',
-        href: 'https://bun.sh/',
-        icon: <Bun />,
-      },
-      {
-        name: 'Express',
-        href: 'https://expressjs.com/',
-        icon: <ExpressJs />,
       },
       {
         name: 'Figma',
@@ -262,98 +221,12 @@ export const experiences: Experience[] = [
         icon: <MongoDB />,
       },
       {
-        name: 'Next.js',
-        href: 'https://nextjs.org/',
-        icon: <NextJs />,
-      },
-      {
-        name: 'Node.js',
-        href: 'https://nodejs.org/',
-        icon: <NodeJs />,
-      },
-      {
-        name: 'PostgreSQL',
-        href: 'https://postgresql.org/',
-        icon: <PostgreSQL />,
-      },
-      {
-        name: 'Prisma',
-        href: 'https://prisma.io/',
-        icon: <Prisma />,
-      },
-      {
-        name: 'React',
-        href: 'https://react.dev/',
-        icon: <ReactIcon />,
-      },
-      {
-        name: 'TypeScript',
-        href: 'https://typescriptlang.org/',
-        icon: <TypeScript />,
-      },
-      {
-        name: 'Postman',
-        href: 'https://postman.com/',
-        icon: <Postman />,
-      },
-      {
-        name: 'Vercel',
-        href: 'https://vercel.com/',
-        icon: <Vercel />,
-      },
-      {
-        name: 'AWS',
-        href: 'https://aws.amazon.com/',
-        icon: <AWS />,
-      },
-    ],
-    website: 'https://expelee.com',
-    x: 'https://x.com/0xExpelee',
-    linkedin: 'https://www.linkedin.com/company/expelee',
-    github: 'https://github.com/expeleeOfficial',
-  },
-  {
-    isCurrent: false,
-    company: 'Flameloop',
-    position: 'Junior Frontend Developer',
-    location: 'Indore, India (offline)',
-    image: '/company/loop.png',
-    description: [
-      'Developed and maintained web applications using HTML, CSS, and JavaScript.',
-      'Collaborated with cross-functional teams to deliver high-quality software on time.',
-      'Design & Developed multiple websites for clients.',
-    ],
-    startDate: 'June 2023',
-    endDate: 'July 2023',
-    website: 'https://flameloop.com',
-    technologies: [
-      {
-        name: 'HTML',
-        href: 'https://html.com/',
-        icon: <Html />,
-      },
-      {
-        name: 'CSS',
-        href: 'https://css.com/',
-        icon: <CSS />,
-      },
-      {
-        name: 'JavaScript',
-        href: 'https://javascript.com/',
-        icon: <JavaScript />,
-      },
-      {
-        name: 'Figma',
-        href: 'https://figma.com/',
-        icon: <Figma />,
-      },
-      {
         name: 'BootStrap',
         href: 'https://getbootstrap.com/',
         icon: <BootStrap />,
       },
     ],
-    x: 'https://x.com/Flameloop149578',
-    linkedin: 'https://www.linkedin.com/company/flameloop',
+    website: 'https://www.beckcollegeprep.com/',
+    linkedin: 'https://www.linkedin.com/company/beck-college-prep',
   },
 ];
