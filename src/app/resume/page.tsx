@@ -1,7 +1,7 @@
 import Container from '@/components/common/Container';
 import { Separator } from '@/components/ui/separator';
-import { resumeConfig } from '@/config/Resume';
 import { generateMetadata as getMetadata } from '@/config/Meta';
+import { resumeConfig } from '@/config/Resume';
 import { Metadata } from 'next';
 import React from 'react';
 
@@ -15,9 +15,9 @@ export const metadata: Metadata = {
       follow: true,
       'max-video-preview': -1,
       'max-image-preview': 'large',
-      'max-snippet': -1
-    }
-  }
+      'max-snippet': -1,
+    },
+  },
 };
 
 export default function ResumePage() {
@@ -28,9 +28,6 @@ export default function ResumePage() {
           <h1 className="text-4xl font-bold tracking-tight lg:text-5xl">
             Resume
           </h1>
-          <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-            My resume.
-          </p>
         </div>
         <Separator />
         <div className="mx-auto max-w-2xl">

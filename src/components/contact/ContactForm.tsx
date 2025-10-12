@@ -98,14 +98,7 @@ export default function ContactForm() {
   };
 
   return (
-    <Card className="border-none shadow-none bg-transparent">
-      <CardHeader>
-        <CardTitle>Send me a message</CardTitle>
-        <CardDescription>
-          Fill out the form below and I will get back to you as soon as
-          possible.
-        </CardDescription>
-      </CardHeader>
+    <Card className="border-none shadow-none bg-transparent pt-0">
       <CardContent>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">

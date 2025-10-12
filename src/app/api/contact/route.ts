@@ -82,18 +82,24 @@ async function sendToTelegram(data: {
   }
 
   const message = `
-🔔 *New Contact Form Submission*
+🔔 New Contact Form Submission 🔔
 
-👤 *Name:* ${data.name.trim()}
-📧 *Email:* ${data.email.trim()}
-📱 *Phone:* ${data.phone.trim()}
+Name: ${data.name.trim()}
+Email: ${data.email.trim()}
+Phone: ${data.phone.trim()}
 
-💬 *Message:*
+Message:
 ${data.message.trim()}
 
-⏰ *Submitted:* ${new Date().toISOString()}
-📍 *Timezone:* ${Intl.DateTimeFormat().resolvedOptions().timeZone}
+Submitted: ${new Date()}
   `.trim();
+
+  // Prevent Telegram parsing error
+  const safeText = message
+    .replace(/_/g, '\\_')
+    .replace(/\*/g, '\\*')
+    .replace(/\[/g, '\\[')
+    .replace(/`/g, '\\`');
 
   try {
     const telegramUrl = `https://api.telegram.org/bot${telegramToken}/sendMessage`;
@@ -105,7 +111,7 @@ ${data.message.trim()}
       },
       body: JSON.stringify({
         chat_id: telegramChatId,
-        text: message,
+        text: safeText,
         parse_mode: 'Markdown',
       }),
     });
