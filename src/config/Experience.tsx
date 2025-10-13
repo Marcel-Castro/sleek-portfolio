@@ -10,6 +10,7 @@ import NextJs from '@/components/technologies/NextJs';
 import NodeJs from '@/components/technologies/NodeJs';
 import Postman from '@/components/technologies/Postman';
 import ReactIcon from '@/components/technologies/ReactIcon';
+import Shopify from '@/components/technologies/Shopify';
 import TailwindCss from '@/components/technologies/TailwindCss';
 import TypeScript from '@/components/technologies/TypeScript';
 import Vercel from '@/components/technologies/Vercel';
@@ -53,6 +54,11 @@ export const experiences: Experience[] = [
     startDate: 'January 2024',
     endDate: 'Present',
     technologies: [
+      {
+        name: 'Shopify',
+        href: 'https://www.shopify.com/',
+        icon: <Shopify />,
+      },
       {
         name: 'JavaScript',
         href: 'https://javascript.com/',
@@ -125,6 +131,11 @@ export const experiences: Experience[] = [
     startDate: 'January 2022',
     endDate: 'January 2024',
     technologies: [
+      {
+        name: 'Shopify',
+        href: 'https://www.shopify.com/',
+        icon: <Shopify />,
+      },
       {
         name: 'HTML',
         href: 'https://html.com/',

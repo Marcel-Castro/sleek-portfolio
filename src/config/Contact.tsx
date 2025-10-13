@@ -1,7 +1,6 @@
 export const contactConfig = {
   title: 'Contact',
-  description:
-    'Get in touch with me. I will get back to you as soon as possible.',
+  description: "Shoot me a message! I'll respond as soon as I can.",
   form: {
     labels: {
       name: 'Name',

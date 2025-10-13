@@ -23,10 +23,9 @@
  *
  * That's it! Your portfolio will automatically update with your information.
  */
-import Github from '@/components/svgs/Github';
+// import Github from '@/components/svgs/Github';
 import LinkedIn from '@/components/svgs/LinkedIn';
 import Mail from '@/components/svgs/Mail';
-import X from '@/components/svgs/X';
 import Bun from '@/components/technologies/Bun';
 import JavaScript from '@/components/technologies/JavaScript';
 import MongoDB from '@/components/technologies/MongoDB';
@@ -35,6 +34,7 @@ import NodeJs from '@/components/technologies/NodeJs';
 import PostgreSQL from '@/components/technologies/PostgreSQL';
 import Prisma from '@/components/technologies/Prisma';
 import ReactIcon from '@/components/technologies/ReactIcon';
+import Shopify from '@/components/technologies/Shopify';
 // Technology Components
 import TypeScript from '@/components/technologies/TypeScript';
 
@@ -49,21 +49,17 @@ export const skillComponents = {
   MongoDB: MongoDB,
   Prisma: Prisma,
   JavaScript: JavaScript,
+  Shopify: Shopify,
 };
 
 export const heroConfig = {
   // Personal Information
-  name: 'Ram',
+  name: 'Marcel',
   title: 'A Full Stack web developer.',
   avatar: '/assets/logo.png',
 
   // Skills Configuration
   skills: [
-    {
-      name: 'Typescript',
-      href: 'https://www.typescriptlang.org/',
-      component: 'TypeScript',
-    },
     {
       name: 'React',
       href: 'https://react.dev/',
@@ -75,21 +71,21 @@ export const heroConfig = {
       component: 'NextJs',
     },
     {
-      name: 'Bun',
-      href: 'https://bun.sh/',
-      component: 'Bun',
+      name: 'Shopify',
+      href: 'https://www.shopify.com/',
+      component: 'Shopify',
     },
     {
-      name: 'PostgreSQL',
-      href: 'https://www.postgresql.org/',
-      component: 'PostgreSQL',
+      name: 'MongoDB',
+      href: 'https://nextjs.org/',
+      component: 'MongoDB',
     },
   ],
 
   // Description Configuration
   description: {
     template:
-      'I build interactive web apps using {skills:0}, {skills:1}, {skills:2}, {skills:3} and {skills:4}. With a focus on <b>UI</b> design. Enthusiastic about <b>Three.js</b>, driven by a keen eye for design.',
+      'I build interactive web applications using various technologies including but not limited to React, Shopify, Next.js, and MongoDB - implementing designs provided by creative teams and turning them into fast, reliable, production-ready sites.',
   },
 
   // Buttons Configuration
@@ -112,23 +108,18 @@ export const heroConfig = {
 // Social Links Configuration
 export const socialLinks = [
   {
-    name: 'X',
-    href: 'https://x.com/ramxcodes',
-    icon: <X />,
-  },
-  {
     name: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/ramxcodes/',
+    href: 'https://www.linkedin.com/in/marcel-castro-/',
     icon: <LinkedIn />,
   },
-  {
-    name: 'Github',
-    href: 'https://github.com/ramxcodes',
-    icon: <Github />,
-  },
+  // {
+  //   name: 'Github',
+  //   href: 'https://github.com/ramxcodes',
+  //   icon: <Github />,
+  // },
   {
     name: 'Email',
-    href: 'mailto:ramxcodes@gmail.com',
+    href: 'mailto:marcelcastro786@gmail.com',
     icon: <Mail />,
   },
 ];
