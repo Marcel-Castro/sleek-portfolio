@@ -137,26 +137,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
       </CardContent>
 
       {project.details && (
-        <CardFooter className="p-6 pt-0 flex justify-between">
-          <div
-            className={`flex items-center gap-1 rounded-md px-2 py-1 text-xs ${
-              project.isWorking
-                ? 'border-green-300 bg-green-500/10'
-                : 'border-red-300 bg-red-500/10'
-            }`}
-          >
-            {project.isWorking ? (
-              <>
-                <div className="size-2 rounded-full bg-green-500 animate-pulse" />
-                All Systems Operational
-              </>
-            ) : (
-              <>
-                <div className="size-2 rounded-full bg-red-500 animate-pulse" />
-                Building
-              </>
-            )}
-          </div>
+        <CardFooter className="p-6 pt-0 flex justify-end">
           <Link
             href={project.projectDetailsPageSlug}
             className="text-secondary flex items-center gap-2 text-sm hover:underline underline-offset-4 hover:text-primary transition-colors"

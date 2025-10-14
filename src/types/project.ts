@@ -9,7 +9,6 @@ export interface Project {
   live: string;
   details: boolean;
   projectDetailsPageSlug: string;
-  isWorking: boolean;
 }
 
 export interface ProjectCaseStudyFrontmatter {

@@ -1,6 +1,7 @@
 import AWS from '@/components/technologies/AWS';
 import BootStrap from '@/components/technologies/BootStrap';
 import CSS from '@/components/technologies/CSS';
+import Contentful from '@/components/technologies/Contentful';
 import ExpressJs from '@/components/technologies/ExpressJs';
 import Figma from '@/components/technologies/Figma';
 import Html from '@/components/technologies/Html';
@@ -60,9 +61,9 @@ export const experiences: Experience[] = [
         icon: <Shopify />,
       },
       {
-        name: 'JavaScript',
-        href: 'https://javascript.com/',
-        icon: <JavaScript />,
+        name: 'Contentful',
+        href: 'https://www.contentful.com/',
+        icon: <Contentful />,
       },
       {
         name: 'Next.js',
@@ -105,6 +106,11 @@ export const experiences: Experience[] = [
         icon: <MongoDB />,
       },
       {
+        name: 'JavaScript',
+        href: 'https://javascript.com/',
+        icon: <JavaScript />,
+      },
+      {
         name: 'HTML',
         href: 'https://html.com/',
         icon: <Html />,
@@ -135,6 +141,11 @@ export const experiences: Experience[] = [
         name: 'Shopify',
         href: 'https://www.shopify.com/',
         icon: <Shopify />,
+      },
+      {
+        name: 'Contentful',
+        href: 'https://www.contentful.com/',
+        icon: <Contentful />,
       },
       {
         name: 'HTML',
