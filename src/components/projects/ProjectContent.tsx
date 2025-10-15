@@ -71,13 +71,15 @@ export function ProjectContent({ frontmatter, content }: ProjectContentProps) {
           <p className="text-xl text-muted-foreground">{description}</p>
 
           {/* Project Meta Information */}
-          <div className="grid gap-4 rounded-lg border bg-muted/20 p-4 sm:grid-cols-2 lg:grid-cols-4">
-            <div>
-              <h5 className="text-sm font-semibold text-muted-foreground">
-                Role
-              </h5>
-              <p className="text-sm">{role}</p>
-            </div>
+          <div className="grid gap-4 rounded-lg border bg-muted/20 p-4 grid-cols-2">
+            {role && (
+              <div>
+                <h5 className="text-sm font-semibold text-muted-foreground">
+                  Role
+                </h5>
+                <p className="text-sm">{role}</p>
+              </div>
+            )}
             {team && (
               <div>
                 <h5 className="text-sm font-semibold text-muted-foreground">

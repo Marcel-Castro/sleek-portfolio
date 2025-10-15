@@ -19,11 +19,10 @@ import { Project } from '@/types/project';
 
 export const projects: Project[] = [
   {
-    title: 'Capital Infusion Lead Engagement Web App',
+    title: 'Echo-SMS',
     description:
       'A login-based web app that unifies multiple Twilio accounts and automates bulk lead messaging. Handles CSV uploads, tracks responses, and flags promising leads for sales follow-up — accelerating Capital Infusion’s client engagement process.',
-    image: '/project/notesbuddy.png',
-    video: 'https://ik.imagekit.io/hokb3mrdr/notesbuddy.mp4?tr=orig',
+    image: '/project/echosms.png',
     link: 'https://www.capital-infusion.com/',
     technologies: [
       { name: 'Next.js', icon: <NextJs key="nextjs" /> },
@@ -36,7 +35,7 @@ export const projects: Project[] = [
       { name: 'Twilio', icon: <Twilio key="twilio" /> },
       { name: 'Github', icon: <Github key="github" /> },
     ],
-    live: 'https://notesbuddy.in',
+    live: 'https://www.capital-infusion.com/',
     details: true,
     projectDetailsPageSlug: '/projects/capital-infusion-portal',
   },
