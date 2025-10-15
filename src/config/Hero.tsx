@@ -55,7 +55,7 @@ export const skillComponents = {
 export const heroConfig = {
   // Personal Information
   name: 'Marcel',
-  title: 'A Full Stack web developer',
+  title: 'A Full Stack Web Developer',
   avatar: '/assets/logo.png',
 
   // Skills Configuration
@@ -85,7 +85,7 @@ export const heroConfig = {
   // Description Configuration
   description: {
     template:
-      'I build interactive web applications using various technologies including but not limited to React, Shopify, Next.js, and MongoDB - implementing designs provided by creative teams and turning them into fast, reliable, production-ready sites.',
+      'I build interactive web applications using various technologies including but not limited to React, Next.js, Shopify, and MongoDB - implementing designs provided by creative teams and turning them into fast, reliable, production-ready sites.',
   },
 
   // Buttons Configuration

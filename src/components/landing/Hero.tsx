@@ -51,22 +51,24 @@ export default function Hero() {
 
   return (
     <Container className="mx-auto max-w-5xl">
-      {/* Image */}
-      <Image
-        src={avatar}
-        alt="hero"
-        width={100}
-        height={100}
-        className="size-24 rounded-full dark:bg-yellow-300 bg-blue-300"
-      />
+      <div className="flex justify-between items-center gap-4">
+        {/* Image */}
+        <Image
+          src={avatar}
+          alt="hero"
+          width={100}
+          height={100}
+          className="size-24 rounded-full border-1 border-gray-200 bg-linear-to-t from-cyan-500 to-blue-500"
+        />
 
-      {/* Text Area */}
-      <div className="mt-8 flex flex-col gap-2">
         <h1 className="text-4xl font-bold">
           Hi, I&apos;m {name} — <span className="text-secondary">{title}</span>
         </h1>
+      </div>
 
-        <div className="mt-4 flex flex-wrap items-center gap-x-1.5 gap-y-2 text-base md:text-lg text-neutral-500 whitespace-pre-wrap">
+      {/* Text Area */}
+      <div className="mt-8 flex flex-col gap-2">
+        <div className="flex flex-wrap items-center gap-x-1.5 gap-y-2 text-base md:text-lg text-neutral-500 whitespace-pre-wrap">
           {renderDescription()}
         </div>
       </div>
@@ -81,10 +83,8 @@ export default function Hero() {
               key={index}
               variant={button.variant as 'outline' | 'default'}
               className={cn(
-                button.variant === 'outline' &&
-                  'inset-shadow-indigo-500',
-                button.variant === 'default' &&
-                  'inset-shadow-indigo-500',
+                button.variant === 'outline' && 'inset-shadow-indigo-500',
+                button.variant === 'default' && 'inset-shadow-indigo-500',
               )}
             >
               {IconComponent && <IconComponent />}

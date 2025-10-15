@@ -16,7 +16,7 @@ export function ProjectNavigation({ previous, next }: ProjectNavigationProps) {
   }
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 mb-6">
       <Separator />
 
       <div className="grid gap-4 md:grid-cols-2">

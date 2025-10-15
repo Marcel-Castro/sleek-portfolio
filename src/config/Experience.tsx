@@ -4,6 +4,7 @@ import CSS from '@/components/technologies/CSS';
 import Contentful from '@/components/technologies/Contentful';
 import ExpressJs from '@/components/technologies/ExpressJs';
 import Figma from '@/components/technologies/Figma';
+import Gatsby from '@/components/technologies/Gatsby';
 import Html from '@/components/technologies/Html';
 import JavaScript from '@/components/technologies/JavaScript';
 import MongoDB from '@/components/technologies/MongoDB';
@@ -56,16 +57,6 @@ export const experiences: Experience[] = [
     endDate: 'Present',
     technologies: [
       {
-        name: 'Shopify',
-        href: 'https://www.shopify.com/',
-        icon: <Shopify />,
-      },
-      {
-        name: 'Contentful',
-        href: 'https://www.contentful.com/',
-        icon: <Contentful />,
-      },
-      {
         name: 'Next.js',
         href: 'https://nextjs.org/',
         icon: <NextJs />,
@@ -104,6 +95,16 @@ export const experiences: Experience[] = [
         name: 'MongoDB',
         href: 'https://mongodb.com/',
         icon: <MongoDB />,
+      },
+      {
+        name: 'Shopify',
+        href: 'https://www.shopify.com/',
+        icon: <Shopify />,
+      },
+      {
+        name: 'Contentful',
+        href: 'https://www.contentful.com/',
+        icon: <Contentful />,
       },
       {
         name: 'JavaScript',
@@ -148,6 +149,21 @@ export const experiences: Experience[] = [
         icon: <Contentful />,
       },
       {
+        name: 'Node.js',
+        href: 'https://nodejs.org/',
+        icon: <NodeJs />,
+      },
+      {
+        name: 'Express',
+        href: 'https://expressjs.com/',
+        icon: <ExpressJs />,
+      },
+      {
+        name: 'Figma',
+        href: 'https://figma.com/',
+        icon: <Figma />,
+      },
+      {
         name: 'HTML',
         href: 'https://html.com/',
         icon: <Html />,
@@ -158,29 +174,9 @@ export const experiences: Experience[] = [
         icon: <CSS />,
       },
       {
-        name: 'Node.js',
-        href: 'https://nodejs.org/',
-        icon: <NodeJs />,
-      },
-      {
-        name: 'Figma',
-        href: 'https://figma.com/',
-        icon: <Figma />,
-      },
-      {
         name: 'JavaScript',
         href: 'https://javascript.com/',
         icon: <JavaScript />,
-      },
-      {
-        name: 'Express',
-        href: 'https://expressjs.com/',
-        icon: <ExpressJs />,
-      },
-      {
-        name: 'Postman',
-        href: 'https://www.postman.com/',
-        icon: <Postman />,
       },
     ],
     website: 'http://gmgadvertising.com/',
@@ -211,6 +207,11 @@ export const experiences: Experience[] = [
         name: 'Express',
         href: 'https://expressjs.com/',
         icon: <ExpressJs />,
+      },
+      {
+        name: 'Gatsby',
+        href: 'https://www.gatsbyjs.com/',
+        icon: <Gatsby />,
       },
       {
         name: 'React',

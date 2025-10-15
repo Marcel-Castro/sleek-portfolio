@@ -11,6 +11,8 @@ import Github from '../svgs/Github';
 import Website from '../svgs/Website';
 import { ProjectComponents } from './ProjectComponents';
 
+const BADGES_TO_SHOW = 4;
+
 interface ProjectContentProps {
   frontmatter: ProjectCaseStudyFrontmatter;
   content: string;
@@ -24,20 +26,10 @@ export function ProjectContent({ frontmatter, content }: ProjectContentProps) {
     technologies,
     github,
     live,
-    timeline,
+    website,
     role,
     team,
-    status,
-    challenges,
-    learnings,
   } = frontmatter;
-
-  const statusVariant =
-    status === 'completed'
-      ? 'default'
-      : status === 'in-progress'
-        ? 'secondary'
-        : 'outline';
 
   return (
     <article className="mx-auto max-w-4xl">
@@ -56,17 +48,18 @@ export function ProjectContent({ frontmatter, content }: ProjectContentProps) {
         <div className="space-y-4">
           {/* Project Status and Technologies */}
           <div className="flex flex-wrap items-center gap-3">
-            <Badge variant={statusVariant} className="text-sm">
-              {status.charAt(0).toUpperCase() + status.slice(1)}
-            </Badge>
-            {technologies.slice(0, 3).map((tech) => (
-              <Badge key={tech} variant="outline" className="text-xs">
+            {technologies.slice(0, BADGES_TO_SHOW).map((tech) => (
+              <Badge
+                key={tech}
+                variant="outline"
+                className="text-xs bg-gray-50/10"
+              >
                 {tech}
               </Badge>
             ))}
-            {technologies.length > 3 && (
-              <Badge variant="outline" className="text-xs">
-                +{technologies.length - 3} more
+            {technologies.length > BADGES_TO_SHOW && (
+              <Badge variant="outline" className="text-xs bg-gray-50/10">
+                +{technologies.length - BADGES_TO_SHOW} more
               </Badge>
             )}
           </div>
@@ -81,12 +74,6 @@ export function ProjectContent({ frontmatter, content }: ProjectContentProps) {
           <div className="grid gap-4 rounded-lg border bg-muted/20 p-4 sm:grid-cols-2 lg:grid-cols-4">
             <div>
               <h5 className="text-sm font-semibold text-muted-foreground">
-                Timeline
-              </h5>
-              <p className="text-sm">{timeline}</p>
-            </div>
-            <div>
-              <h5 className="text-sm font-semibold text-muted-foreground">
                 Role
               </h5>
               <p className="text-sm">{role}</p>
@@ -99,18 +86,23 @@ export function ProjectContent({ frontmatter, content }: ProjectContentProps) {
                 <p className="text-sm">{team}</p>
               </div>
             )}
-            <div>
-              <h5 className="text-sm font-semibold text-muted-foreground">
-                Status
-              </h5>
-              <Badge variant={statusVariant} className="text-xs">
-                {status.charAt(0).toUpperCase() + status.slice(1)}
-              </Badge>
-            </div>
           </div>
 
           {/* Action Buttons */}
           <div className="flex flex-wrap gap-3">
+            {website && (
+              <Button asChild>
+                <Link
+                  href={website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2"
+                >
+                  <Website className="size-4" />
+                  Website
+                </Link>
+              </Button>
+            )}
             {live && (
               <Button asChild>
                 <Link
@@ -151,7 +143,7 @@ export function ProjectContent({ frontmatter, content }: ProjectContentProps) {
             {technologies.map((tech) => (
               <div
                 key={tech}
-                className="inline-flex items-center gap-2 rounded-full bg-muted/50 px-3 py-1.5 text-sm font-medium"
+                className="inline-flex items-center gap-2 rounded-full bg-muted/70 px-3 py-1.5 text-sm font-medium"
               >
                 <span>{tech}</span>
               </div>
@@ -159,49 +151,6 @@ export function ProjectContent({ frontmatter, content }: ProjectContentProps) {
           </div>
         </div>
       </div>
-
-      {/* Challenges and Learnings */}
-      {(challenges?.length || learnings?.length) && (
-        <div className="mb-8 grid gap-6 md:grid-cols-2">
-          {challenges && challenges.length > 0 && (
-            <div className="rounded-lg border border-yellow-200 bg-yellow-50 p-4 dark:border-yellow-800 dark:bg-yellow-950/20">
-              <h3 className="mb-3 text-lg font-semibold text-yellow-800 dark:text-yellow-200">
-                Key Challenges
-              </h3>
-              <ul className="space-y-2">
-                {challenges.map((challenge, index) => (
-                  <li
-                    key={index}
-                    className="flex items-start gap-2 text-sm text-yellow-700 dark:text-yellow-300"
-                  >
-                    <span className="mt-1 block size-1.5 rounded-full bg-yellow-500 dark:bg-yellow-400" />
-                    {challenge}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-
-          {learnings && learnings.length > 0 && (
-            <div className="rounded-lg border border-green-200 bg-green-50 p-4 dark:border-green-800 dark:bg-green-950/20">
-              <h3 className="mb-3 text-lg font-semibold text-green-800 dark:text-green-200">
-                Key Learnings
-              </h3>
-              <ul className="space-y-2">
-                {learnings.map((learning, index) => (
-                  <li
-                    key={index}
-                    className="flex items-start gap-2 text-sm text-green-700 dark:text-green-300"
-                  >
-                    <span className="mt-1 block size-1.5 rounded-full bg-green-500 dark:bg-green-400" />
-                    {learning}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-        </div>
-      )}
 
       {/* Content */}
       <div className="prose prose-neutral max-w-none dark:prose-invert">

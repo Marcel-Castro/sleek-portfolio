@@ -18,13 +18,10 @@ export interface ProjectCaseStudyFrontmatter {
   technologies: string[];
   github: string;
   live: string;
+  website: string;
   timeline: string;
   role: string;
   team?: string;
-  status: 'completed' | 'in-progress' | 'archived';
-  featured: boolean;
-  challenges?: string[];
-  learnings?: string[];
   isPublished: boolean;
 }
 
