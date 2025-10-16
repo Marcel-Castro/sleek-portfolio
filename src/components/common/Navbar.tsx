@@ -20,6 +20,9 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
+    // Set scroll state when component is first mounted
+    setScrolled(window.scrollY > SCROLL_THRESHOLD);
+
     const onScroll = () => {
       setScrolled(window.scrollY > SCROLL_THRESHOLD);
     };
@@ -39,7 +42,14 @@ export default function Navbar() {
             height={navbarConfig.logo.height}
           />
         </Link>
-        <div className="flex items-center justify-center gap-6">
+        <div
+          className={clsx(
+            'flex items-center justify-center gap-8',
+            isHome && !scrolled
+              ? ''
+              : 'bg-black/2 dark:bg-gray-950/30 border dark:border-white/18 border-black/20 skill-inner-shadow py-2 px-5 rounded-full',
+          )}
+        >
           {navbarConfig.navItems.map((item) => (
             <Link
               className="transition-all duration-300 ease-in-out hover:underline hover:decoration-2 hover:underline-offset-4"
