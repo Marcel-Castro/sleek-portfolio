@@ -15,10 +15,6 @@ interface ExperienceCardProps {
   experience: Experience;
 }
 
-const parseDescription = (text: string): string => {
-  return text.replace(/\*(.*?)\*/g, '<b>$1</b>');
-};
-
 export function ExperienceCard({ experience }: ExperienceCardProps) {
   return (
     <div className="flex flex-col gap-4">

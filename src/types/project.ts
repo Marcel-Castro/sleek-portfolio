@@ -23,6 +23,7 @@ export interface ProjectCaseStudyFrontmatter {
   role: string;
   team?: string;
   isPublished: boolean;
+  featured?: boolean;
 }
 
 export interface ProjectCaseStudy {
