@@ -134,7 +134,7 @@
 }
 
 .text-secondary {
-  @apply text-[#909092] dark:text-[#909092];
+  @apply text-[#828282] dark:text-[#c1c1c1];
 }
 
 .font-hanken-grotesk {

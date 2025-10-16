@@ -1,13 +1,7 @@
 'use client';
 
 import { Button } from '@/components/ui/button';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import {
   Form,
   FormControl,
@@ -157,7 +151,7 @@ export default function ContactForm() {
                   <FormLabel>Message *</FormLabel>
                   <FormControl>
                     <Textarea
-                      placeholder="Tell me about your project or just say hello..."
+                      placeholder="Say hi..."
                       className="min-h-[120px] resize-none"
                       {...field}
                     />

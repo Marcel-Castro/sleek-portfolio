@@ -68,7 +68,7 @@ export default function Hero() {
 
       {/* Text Area */}
       <div className="mt-8 flex flex-col gap-2">
-        <div className="flex flex-wrap items-center gap-x-1.5 gap-y-2 text-base md:text-lg text-neutral-500 whitespace-pre-wrap">
+        <div className="flex flex-wrap items-center gap-x-1.5 gap-y-2 text-base md:text-lg text-secondary whitespace-pre-wrap">
           {renderDescription()}
         </div>
       </div>

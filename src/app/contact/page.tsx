@@ -16,9 +16,9 @@ export const metadata: Metadata = {
       follow: true,
       'max-video-preview': -1,
       'max-image-preview': 'large',
-      'max-snippet': -1
-    }
-  }
+      'max-snippet': -1,
+    },
+  },
 };
 
 export default function ContactPage() {
@@ -37,8 +37,16 @@ export default function ContactPage() {
         <Separator />
 
         {/* Contact Form */}
-        <div className="mx-auto max-w-2xl">
+        <div className="mx-auto max-w-2xl mb-2">
           <ContactForm />
+        </div>
+        <Separator />
+
+        <div className="space-y-4 text-center">
+          <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
+            Alternatively, you can reach me at <br></br>
+            <b className="text-primary">marcelcastro786@gmail.com</b>
+          </p>
         </div>
       </div>
     </Container>

@@ -22,6 +22,10 @@ export default function RootLayout({
     <ViewTransitions>
       <html lang="en" suppressHydrationWarning>
         <body className={`font-hanken-grotesk antialiased`}>
+          <>
+            <div className="fixed inset-0 bg-gradient-to-bl from-white from-40% to-blue-100 -z-10 dark:hidden" />
+            <div className="hidden dark:block fixed inset-0 bg-gradient-to-tr from-neutral-950 from-45% to-indigo-950 -z-10" />
+          </>
           <ThemeProvider
             attribute="class"
             defaultTheme="system"
