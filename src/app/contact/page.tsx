@@ -4,6 +4,7 @@ import { Separator } from '@/components/ui/separator';
 import { contactConfig } from '@/config/Contact';
 import { generateMetadata as getMetadata } from '@/config/Meta';
 import { Metadata } from 'next';
+import { Link } from 'next-view-transitions';
 import React from 'react';
 
 export const metadata: Metadata = {
@@ -45,7 +46,20 @@ export default function ContactPage() {
         <div className="space-y-4 text-center">
           <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
             Alternatively, you can reach me at <br></br>
-            <b className="text-primary">marcelcastro786@gmail.com</b>
+            <b className="text-primary">marcelcastro786@gmail.com</b> <br></br>
+          </p>
+        </div>
+
+        <div className="space-y-4">
+          <p className="mx-auto max-w-2xl text-lg text-center text-muted-foreground">
+            Or at<br></br>
+            <Link
+              href="https://www.linkedin.com/in/marcel-castro-/"
+              key="linkedin"
+              className="text-primary font-bold"
+            >
+              <span className="size-6">LinkedIn</span>
+            </Link>
           </p>
         </div>
       </div>

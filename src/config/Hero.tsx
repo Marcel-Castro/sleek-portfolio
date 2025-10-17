@@ -23,9 +23,6 @@
  *
  * That's it! Your portfolio will automatically update with your information.
  */
-// import Github from '@/components/svgs/Github';
-import LinkedIn from '@/components/svgs/LinkedIn';
-import Mail from '@/components/svgs/Mail';
 import Bun from '@/components/technologies/Bun';
 import JavaScript from '@/components/technologies/JavaScript';
 import MongoDB from '@/components/technologies/MongoDB';
@@ -104,22 +101,3 @@ export const heroConfig = {
     },
   ],
 };
-
-// Social Links Configuration
-export const socialLinks = [
-  {
-    name: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/marcel-castro-/',
-    icon: <LinkedIn />,
-  },
-  // {
-  //   name: 'Github',
-  //   href: 'https://github.com/ramxcodes',
-  //   icon: <Github />,
-  // },
-  {
-    name: 'Email',
-    href: 'mailto:marcelcastro786@gmail.com',
-    icon: <Mail />,
-  },
-];
