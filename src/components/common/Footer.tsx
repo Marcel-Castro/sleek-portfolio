@@ -16,8 +16,9 @@ export default function Footer() {
           >
             Sleek Portfolio Template
           </a>{' '}
-          by <b>Ramxcodes</b>.
-          <br /> &copy; {new Date().getFullYear()} All Rights Reserved.
+          by <b>Ramxcodes</b>
+          <br /> &copy; {new Date().getFullYear()} Marcel Castro · All rights
+          reserved
         </p>
       </div>
     </Container>

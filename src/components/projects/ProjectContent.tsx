@@ -71,7 +71,7 @@ export function ProjectContent({ frontmatter, content }: ProjectContentProps) {
           <p className="text-xl text-muted-foreground">{description}</p>
 
           {/* Project Meta Information */}
-          <div className="grid gap-4 rounded-lg border bg-muted/20 p-4 grid-cols-2">
+          <div className="flex gap-8 rounded-lg border bg-muted/20 p-4">
             {role && (
               <div>
                 <h5 className="text-sm font-semibold text-muted-foreground">
@@ -145,7 +145,7 @@ export function ProjectContent({ frontmatter, content }: ProjectContentProps) {
             {technologies.map((tech) => (
               <div
                 key={tech}
-                className="inline-flex items-center gap-2 rounded-full bg-muted/70 px-3 py-1.5 text-sm font-medium"
+                className="inline-flex items-center gap-2 rounded-full border dark:border-white/10 border-black/12 bg-muted/70 px-3 py-1.5 text-sm font-medium"
               >
                 <span>{tech}</span>
               </div>

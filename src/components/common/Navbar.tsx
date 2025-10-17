@@ -47,7 +47,7 @@ export default function Navbar() {
             'flex items-center justify-center gap-8',
             isHome && !scrolled
               ? ''
-              : 'bg-black/2 dark:bg-gray-950/20 border dark:border-white/18 border-black/20 skill-inner-shadow py-2 px-5 rounded-full',
+              : 'bg-black/2 dark:bg-gray-950/25 border dark:border-white/18 border-black/20 skill-inner-shadow py-2 px-6 rounded-full',
           )}
         >
           {navbarConfig.navItems.map((item) => (
@@ -61,7 +61,12 @@ export default function Navbar() {
           ))}
         </div>
         <div className="flex items-center gap-4">
-          <ThemeToggleButton variant="circle" start="top-right" blur />
+          <ThemeToggleButton
+            className="dark:bg-gray-950/25 border"
+            variant="circle"
+            start="top-right"
+            blur
+          />
         </div>
       </div>
     </Container>
