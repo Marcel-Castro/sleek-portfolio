@@ -9,6 +9,7 @@ import { useEffect, useState } from 'react';
 import React from 'react';
 
 import Container from './Container';
+import NavDropDown from './NavDropDown';
 import { ThemeToggleButton } from './ThemeSwitch';
 
 // Defines how far the user needs to scroll before the avatar's display mode changes
@@ -32,7 +33,14 @@ export default function Navbar() {
 
   return (
     <Container className="sticky top-0 z-20 rounded-md py-4 backdrop-blur-sm">
-      <div className="flex items-center justify-between px-6">
+      <div
+        className={clsx(
+          'flex items-center px-6',
+          isHome && !scrolled
+            ? 'justify-end md:justify-between'
+            : 'justify-between',
+        )}
+      >
         <Link className={clsx(isHome && !scrolled ? 'hidden' : '')} href="/">
           <Image
             className="h-12 w-12 rounded-md border border-gray-200 bg-linear-to-t from-cyan-500 to-blue-500 transition-all duration-300 ease-in-out hover:scale-90"
@@ -44,10 +52,10 @@ export default function Navbar() {
         </Link>
         <div
           className={clsx(
-            'flex items-center justify-center gap-8',
+            'hidden md:flex items-center justify-center gap-8',
             isHome && !scrolled
               ? ''
-              : 'bg-black/2 dark:bg-gray-950/25 border dark:border-white/18 border-black/20 skill-inner-shadow py-2 px-6 rounded-full',
+              : 'bg-black/2 dark:bg-gray-950/25 border dark:border-white/18 border-black/10 skill-inner-shadow py-2 px-6 rounded-full',
           )}
         >
           {navbarConfig.navItems.map((item) => (
@@ -60,13 +68,16 @@ export default function Navbar() {
             </Link>
           ))}
         </div>
-        <div className="flex items-center gap-4">
+        <div className="hidden md:flex items-center gap-4">
           <ThemeToggleButton
             className="dark:bg-gray-950/25 border"
             variant="circle"
             start="top-right"
             blur
           />
+        </div>
+        <div className="block md:hidden">
+          <NavDropDown navItems={navbarConfig.navItems} />
         </div>
       </div>
     </Container>

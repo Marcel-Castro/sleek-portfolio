@@ -138,12 +138,14 @@ export const ThemeToggleButton = ({
   start = 'center',
   blur = false,
   gifUrl = '',
+  showLabel = false,
 }: {
   className?: string;
   variant?: AnimationVariant;
   start?: AnimationStart;
   blur?: boolean;
   gifUrl?: string;
+  showLabel?: boolean;
 }) => {
   const { isDark, toggleTheme } = useThemeToggle({
     variant,
@@ -164,7 +166,15 @@ export const ThemeToggleButton = ({
       onClick={toggleTheme}
       aria-label="Toggle theme"
     >
-      <span className="sr-only">Toggle theme</span>
+      {showLabel ? (
+        isDark ? (
+          <span>Lights On</span>
+        ) : (
+          <span>Lights Off</span>
+        )
+      ) : (
+        <span className="sr-only">Toggle theme</span>
+      )}
       {isDark ? <Moon className="size-4" /> : <Sun className="size-4" />}
     </Button>
   );
