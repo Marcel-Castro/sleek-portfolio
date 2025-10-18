@@ -60,7 +60,7 @@ export default function Hero() {
           className="size-24 rounded-full border-1 border-gray-200 bg-linear-to-t from-cyan-500 to-blue-500"
         />
 
-        <h1 className="text-4xl font-bold">
+        <h1 className="text-3xl sm:text-4xl font-bold">
           Hi, I&apos;m {name} — <span className="text-secondary">{title}</span>
         </h1>
       </div>

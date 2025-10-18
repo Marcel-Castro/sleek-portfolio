@@ -37,7 +37,7 @@ export default function Navbar() {
         className={clsx(
           'flex items-center px-6',
           isHome && !scrolled
-            ? 'justify-end md:justify-between'
+            ? 'justify-end sm:justify-between'
             : 'justify-between',
         )}
       >
@@ -52,7 +52,7 @@ export default function Navbar() {
         </Link>
         <div
           className={clsx(
-            'hidden md:flex items-center justify-center gap-8',
+            'hidden sm:flex items-center justify-center gap-8',
             isHome && !scrolled
               ? ''
               : 'bg-black/2 dark:bg-gray-950/25 border dark:border-white/18 border-black/10 skill-inner-shadow py-2 px-6 rounded-full',
@@ -68,7 +68,7 @@ export default function Navbar() {
             </Link>
           ))}
         </div>
-        <div className="hidden md:flex items-center gap-4">
+        <div className="hidden sm:flex items-center gap-4">
           <ThemeToggleButton
             className="dark:bg-gray-950/25 border"
             variant="circle"
@@ -76,7 +76,7 @@ export default function Navbar() {
             blur
           />
         </div>
-        <div className="block md:hidden">
+        <div className="block sm:hidden">
           <NavDropDown navItems={navbarConfig.navItems} />
         </div>
       </div>
