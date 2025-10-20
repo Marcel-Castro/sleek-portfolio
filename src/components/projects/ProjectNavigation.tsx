@@ -21,7 +21,7 @@ export function ProjectNavigation({ previous, next }: ProjectNavigationProps) {
 
       <div className="grid gap-4 md:grid-cols-2">
         {/* Previous Project */}
-        <div className={`${next ? '' : 'md:col-span-2'}`}>
+        <div className={`${next ? '' : 'md:col-span-1'}`}>
           {previous ? (
             <Button
               variant="outline"
@@ -46,7 +46,7 @@ export function ProjectNavigation({ previous, next }: ProjectNavigationProps) {
         </div>
 
         {/* Next Project */}
-        <div className={`${previous ? '' : 'md:col-span-2'}`}>
+        <div className={`${previous ? '' : 'md:col-span-1'}`}>
           {next ? (
             <Button
               variant="outline"

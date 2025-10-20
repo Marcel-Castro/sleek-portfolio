@@ -175,7 +175,7 @@ export const ThemeToggleButton = ({
       ) : (
         <span className="sr-only">Toggle theme</span>
       )}
-      {isDark ? <Moon className="size-4" /> : <Sun className="size-4" />}
+      {isDark ? <Moon className="size-4.5" /> : <Sun className="size-4.5" />}
     </Button>
   );
 };

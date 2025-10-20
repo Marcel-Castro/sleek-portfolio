@@ -20,8 +20,8 @@ export default function NavDropDown({ navItems }: NavDropDownProps) {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <button className="rounded-md bg-black/2 dark:bg-gray-950/25 border dark:border-white/18 border-black/20 skill-inner-shadow py-2 px-4">
-          <Menu />
+        <button className="flex justify-center items-center h-11 w-11 rounded-md bg-black/2 dark:bg-gray-950/25 border dark:border-white/18 border-black/20 skill-inner-shadow">
+          <Menu className="h-6 w-6" />
         </button>
       </DropdownMenuTrigger>
       <DropdownMenuContent

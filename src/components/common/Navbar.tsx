@@ -43,7 +43,7 @@ export default function Navbar() {
       >
         <Link className={clsx(isHome && !scrolled ? 'hidden' : '')} href="/">
           <Image
-            className="h-12 w-12 rounded-md border border-gray-200 bg-linear-to-t from-cyan-500 to-blue-500 transition-all duration-300 ease-in-out hover:scale-90"
+            className="h-11 w-11 rounded-md border border-gray-200 bg-linear-to-t from-cyan-500 to-blue-500 transition-all duration-300 ease-in-out hover:scale-90"
             src={navbarConfig.logo.src}
             alt={navbarConfig.logo.alt}
             width={navbarConfig.logo.width}
@@ -70,7 +70,7 @@ export default function Navbar() {
         </div>
         <div className="hidden sm:flex items-center gap-4">
           <ThemeToggleButton
-            className="dark:bg-gray-950/25 border"
+            className="dark:bg-gray-950/25 border h-11 w-11"
             variant="circle"
             start="top-right"
             blur

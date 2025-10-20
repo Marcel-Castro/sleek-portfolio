@@ -77,7 +77,7 @@ export default async function ProjectCaseStudyPage({
 
   return (
     <Container className="py-16">
-      <div className="space-y-12">
+      <div className="space-y-8">
         {/* Back Button */}
         <div>
           <Button variant="ghost" asChild className="group">

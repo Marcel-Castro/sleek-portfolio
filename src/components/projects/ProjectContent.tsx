@@ -34,8 +34,8 @@ export function ProjectContent({ frontmatter, content }: ProjectContentProps) {
   return (
     <article className="mx-auto max-w-4xl">
       {/* Hero Section */}
-      <header className="mb-8 space-y-6">
-        <div className="relative aspect-video overflow-hidden rounded-lg">
+      <header className="mb-8 space-y-8">
+        <div className="relative aspect-video overflow-hidden rounded-lg mb-4">
           <Image
             src={image}
             alt={title}
@@ -45,7 +45,7 @@ export function ProjectContent({ frontmatter, content }: ProjectContentProps) {
           />
         </div>
 
-        <div className="space-y-4">
+        <div className="space-y-4 mb-8">
           {/* Project Status and Technologies */}
           <div className="flex flex-wrap items-center gap-3">
             {technologies.slice(0, BADGES_TO_SHOW).map((tech) => (

@@ -8,7 +8,6 @@ import Skill from '../common/Skill';
 import Github from '../svgs/Github';
 import LinkedIn from '../svgs/LinkedIn';
 import Website from '../svgs/Website';
-import X from '../svgs/X';
 import { Tooltip, TooltipContent, TooltipTrigger } from '../ui/tooltip';
 
 interface ExperienceCardProps {
@@ -51,20 +50,6 @@ export function ExperienceCard({ experience }: ExperienceCardProps) {
                     </Link>
                   </TooltipTrigger>
                   <TooltipContent>Visit Website</TooltipContent>
-                </Tooltip>
-              )}
-              {experience.x && (
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <Link
-                      href={experience.x}
-                      target="_blank"
-                      className="size-4 text-neutral-500"
-                    >
-                      <X />
-                    </Link>
-                  </TooltipTrigger>
-                  <TooltipContent>Follow on X</TooltipContent>
                 </Tooltip>
               )}
               {experience.linkedin && (
@@ -117,7 +102,7 @@ export function ExperienceCard({ experience }: ExperienceCardProps) {
 
       {/* Technologies */}
       <div>
-        <h4 className="text-md mt-4 mb-2 font-semibold">Technologies</h4>
+        <h4 className="text-md mb-2 font-semibold">Technologies</h4>
         <div className="flex flex-wrap gap-2">
           {experience.technologies.map((technology, techIndex: number) => (
             <Skill
