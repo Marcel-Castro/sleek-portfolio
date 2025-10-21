@@ -49,7 +49,7 @@ export default function Hero() {
   };
 
   return (
-    <Container className="mx-auto max-w-5xl">
+    <Container className="mx-auto max-w-5xl space-y-6">
       <div className="flex justify-between items-center gap-4">
         {/* Image */}
         <Image
@@ -60,20 +60,20 @@ export default function Hero() {
           className="size-24 rounded-full border-1 border-gray-200 bg-linear-to-t from-cyan-500 to-blue-500"
         />
 
-        <h1 className="text-3xl sm:text-4xl font-bold">
+        <h1 className="text-2xl sm:text-4xl font-bold">
           Hi, I&apos;m {name} — <span className="text-secondary">{title}</span>
         </h1>
       </div>
 
       {/* Text Area */}
-      <div className="mt-8 flex flex-col gap-2">
+      <div className="flex flex-col gap-2">
         <div className="flex flex-wrap items-center gap-x-1.5 gap-y-2 text-base md:text-lg text-secondary whitespace-pre-wrap">
           {renderDescription()}
         </div>
       </div>
 
       {/* Buttons */}
-      <div className="mt-8 flex gap-4">
+      <div className="flex gap-4">
         {buttons.map((button, index) => {
           const IconComponent =
             buttonIcons[button.icon as keyof typeof buttonIcons];

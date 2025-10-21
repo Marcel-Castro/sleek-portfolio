@@ -1,11 +1,17 @@
 import Container from '@/components/common/Container';
 import ContactForm from '@/components/contact/ContactForm';
 import { Separator } from '@/components/ui/separator';
-import { contactConfig } from '@/config/Contact';
+import { contactConfig, socialLinks } from '@/config/Contact';
 import { generateMetadata as getMetadata } from '@/config/Meta';
 import { Metadata } from 'next';
 import { Link } from 'next-view-transitions';
 import React from 'react';
+
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from '../../components/ui/tooltip';
 
 export const metadata: Metadata = {
   ...getMetadata('/contact'),
@@ -50,17 +56,24 @@ export default function ContactPage() {
           </p>
         </div>
 
-        <div className="space-y-4">
-          <p className="mx-auto max-w-2xl text-lg text-center text-muted-foreground">
-            Or at<br></br>
-            <Link
-              href="https://www.linkedin.com/in/marcel-castro-/"
-              key="linkedin"
-              className="text-primary font-bold"
-            >
-              <span className="size-6">LinkedIn</span>
-            </Link>
-          </p>
+        {/* Social Links */}
+        <div className="flex justify-center items-center gap-4">
+          {socialLinks.map((link) => (
+            <Tooltip key={link.name} delayDuration={0}>
+              <TooltipTrigger asChild>
+                <Link
+                  href={link.href}
+                  key={link.name}
+                  className="text-secondary flex items-center gap-2"
+                >
+                  <span className="size-8">{link.icon}</span>
+                </Link>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>{link.name}</p>
+              </TooltipContent>
+            </Tooltip>
+          ))}
         </div>
       </div>
     </Container>
