@@ -1,4 +1,5 @@
 import AWS from '@/components/technologies/AWS';
+import Azure from '@/components/technologies/Azure';
 import BootStrap from '@/components/technologies/BootStrap';
 import CSS from '@/components/technologies/CSS';
 import Contentful from '@/components/technologies/Contentful';
@@ -16,6 +17,7 @@ import Shopify from '@/components/technologies/Shopify';
 import TailwindCss from '@/components/technologies/TailwindCss';
 import TypeScript from '@/components/technologies/TypeScript';
 import Vercel from '@/components/technologies/Vercel';
+import WordPress from '@/components/technologies/Wordpress';
 
 export interface Technology {
   name: string;
@@ -130,10 +132,12 @@ export const experiences: Experience[] = [
     location: 'Miami, FL',
     image: '/company/gorilla_logo.png',
     description: [
-      'Refactored and optimized Shopify Liquid codebases to improve readability, performance, and visual design.',
-      'Built responsive front-end components aligned with product owner guidelines.',
-      'Integrated Contentful CMS into multiple Shopify storefronts to enable marketing teams to manage content without developer intervention.',
-      'Created and maintained Power Automate flows and Azure Functions to process and sync company data across Microsoft 365 services.',
+      'Refactored and optimized Shopify Liquid codebases to improve performance, maintainability, and user experience.',
+      'Developed responsive and accessible front-end components aligned with project owner design specifications.',
+      'Implemented headless CMS integrations (Contentful) to empower non-technical teams to manage content independently.',
+      'Maintained and enhanced multiple WordPress sites originally developed by third parties.',
+      'Automated internal processes with Microsoft Power Automate, connecting various data sources across Microsoft 365.',
+      'Built and deployed serverless Azure Functions (Node.js) to extend automation capabilities and securely process external data.',
     ],
     startDate: 'January 2022',
     endDate: 'January 2024',
@@ -178,6 +182,16 @@ export const experiences: Experience[] = [
         href: 'https://javascript.com/',
         icon: <JavaScript />,
       },
+      {
+        name: 'WordPress',
+        href: 'https://wordpress.org/',
+        icon: <WordPress />,
+      },
+      {
+        name: 'Azure',
+        href: 'https://azure.microsoft.com/en-us/',
+        icon: <Azure />,
+      },
     ],
     website: 'http://gmgadvertising.com/',
     linkedin: 'https://www.linkedin.com/company/pitch-management-gmg/',
@@ -189,11 +203,11 @@ export const experiences: Experience[] = [
     location: 'Miami, FL',
     image: '/company/beck_logo.png',
     description: [
-      'Developed and deployed a high-performance static website using Gatsby.js to represent the company online, attracting new clients.',
-      'Built a checkout flow using Reach Router through Gatsby.js for purchasing tutoring sessions directly on the site.',
-      'Developed AWS SDK-based endpoints for securely managing file uploads to AWS S3 buckets.',
-      'Contributed to a RESTful API using Express and Mongoose to manage backend data operations.',
-      'Collaborated with company leadership to translate business requirements into scalable technical solutions.',
+      'Contributed to the development of a high-performance static website using Gatsby.js, helping expand the company’s online reach and attract new clients.',
+      'Collaborated closely with a supervisor to design and prototype homepage components in Figma, contributing both to the visual direction and implementation details of the homepage.',
+      'Built a multi-step checkout flow using Reach Router and Stripe to streamline the purchase of tutoring sessions.',
+      'Developed RESTful API endpoints to manage client and event data, enabling administrative and scheduling functionality.',
+      'Integrated AWS S3 for secure, programmatic file storage and upload handling.',
     ],
     startDate: 'August 2020',
     endDate: 'May 2021',
